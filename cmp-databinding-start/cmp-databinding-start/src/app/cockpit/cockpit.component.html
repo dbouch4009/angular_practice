@@ -5,6 +5,21 @@
     <input type="text" class="form-control" [(ngModel)]="newServerName">
     <label>Server Content</label>
     <input type="text" class="form-control" [(ngModel)]="newServerContent">
+    <label>Server Nickname</label>
+    <input
+      type="text"
+      class="form-control"
+      #serverNicknameInput
+    >  <!-- this is local referencing, and it is whack 
+
+    <label>Server Country</label>
+    <input
+      type="text"
+      class="form-control"
+      #serverCountry
+    >
+    -->
+
     <br>
     <button
       class="btn btn-primary"
@@ -12,5 +27,21 @@
     <button
       class="btn btn-primary"
       (click)="onAddBlueprint()">Add Server Blueprint</button>
+    <button
+      class="btn btn-primary"
+      (click)="onAddNickname(serverNicknameInput)"        
+    >
+      Add Nickname: 
+    </button>
+    <label class="background-gray">{{ nickName }}</label>
+    <!--  this method is whack
+    <button
+      class="btn btn-primary"
+      (click)="onAddCountry()"
+    >
+      Country of Origin: 
+    </button>
+    <label>{{ serverCountry }}</label>
+    -->
   </div>
 </div>

@@ -1,9 +1,11 @@
+<button class="btn btn-primary" (click)="onChangeFirst()">Change First Element</button>
 <div
 class="panel panel-default">
 <div class="panel-heading">{{ element.name }}</div>
+
 <div class="panel-body">
   <p>
-    <strong *ngIf="element.type === 'server'" style="color: red">{{ element.name }}</strong>
+    <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong>
     <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
   </p>
 </div>

@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   serverElements = [
-    {type: 'server', name: 'Tester', content:'boomerang Prefab'},
-    {type: 'twist', name: 'bang', content:'boomerang'}
+    {type: 'server', name: 'Tester', content:'boomerang Prefab'}
+    //{type: 'blueprint', name: 'bang', content:'boomerang'}
   ];
 
   onServerAdded(serverData: {serverName: string, serverContent: string}) {
@@ -27,4 +27,7 @@ export class AppComponent {
       });
      }
 
+     onDestroyFirst(){
+      this.serverElements.splice(0,1);
+    }
 }
