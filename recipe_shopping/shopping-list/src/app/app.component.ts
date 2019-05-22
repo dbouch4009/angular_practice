@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  loadedFeature: string = 'recipe';
+
+  onNavigate(feautre: string){
+    this.loadedFeature = feautre;
+  }
   
 }
