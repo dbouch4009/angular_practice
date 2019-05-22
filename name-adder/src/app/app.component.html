@@ -1,0 +1,37 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h1> Count Name-ula </h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <app-add-name
+        (personCreated)="onPersonCreated($event)"
+      ></app-add-name>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <app-recent-name
+        [lastName] = "recentLast"
+      ></app-recent-name>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <app-show-names
+        *ngFor = "let person of persons"
+        [personEntity] = "person"
+      ></app-show-names>
+    </div>
+  </div>
+
+</div>
