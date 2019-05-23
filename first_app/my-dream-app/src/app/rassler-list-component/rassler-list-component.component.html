@@ -1,0 +1,13 @@
+<div class="row">
+  <button class="col-xs-2 btn btn-primary"
+  (click)="addRassler()">
+    Make Rassler
+  </button>
+
+  <div class="col-xs-6">
+    <app-rassler *ngFor="let rassler of rasslers; let i = index"
+      [ngClass]="{'whiteText': i >= 3}"
+    ></app-rassler>  <!--this rasslers variable was defined in rassler-list-component .ts file, but refers to rassler element-->
+  </div>
+  
+</div>

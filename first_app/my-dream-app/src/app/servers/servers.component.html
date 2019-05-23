@@ -1,0 +1,20 @@
+<div class="row">
+    <!--property binding-->
+  <button [innerText]="displayServerStatus()" class="col-md-3 btn btn-primary" [disabled] = "! allowNewServer" (click)="onCreateServer()">
+      Add Server
+  </button>
+  <div class="col-md-3">
+      {{serverCreationStatus}}
+  </div>
+  <div class="col-md-3">
+      <label>Server Name</label>
+      <input
+      type="text"
+      class="form-control"
+      (input)="onUpdateServerName($event)">  <!-- $event gets passed as argument to callback function-->
+        {{serverName}}
+  </div>
+  <div class="col-md-3">
+      <app-server>  </app-server>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+
+<div class="row">
+  <label class="col-xs-3">Girl First Name</label>
+  <div class="col-xs-3">
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="girlFirstName">
+  </div>
+  
+  <label class="col-xs-3">Boy First Name</label>
+  <div class="col-xs-3">
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="boyFirstName">
+  </div>
+
+  <label class="col-xs-3">Girl Last Name</label>
+  <div class="col-xs-3">
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="girlLastName">
+  </div>
+  
+  <label class="col-xs-3">Boy Last Name</label>
+  <div class="col-xs-3">
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="boyLastName">
+  </div>  
+
+  <hr>
+
+  <div class="col-xs-6 text-center">
+      <button
+      class="btn btn-primary"
+      (click)="onAddBoy()">
+        Add Boy
+    </button>
+  </div>
+
+  <div class="col-xs-6 text-center">
+    <button
+    class="btn btn-primary"
+    (click)="onAddGirl()">
+      Add Girl
+    </button>
+  </div>
+  
+</div>

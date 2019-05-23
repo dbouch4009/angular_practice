@@ -1,0 +1,27 @@
+.jeff-font{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: purple;
+    font-size: 15px;
+}
+
+.jeff-background{
+    background-color: cyan;
+    height: max-content;
+    width: max-content;
+}
+
+.white-background{
+    background-color: aliceblue;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.italic{
+    font: italic;
+}
+
+.bigText{
+    font-size: 20px;
+}

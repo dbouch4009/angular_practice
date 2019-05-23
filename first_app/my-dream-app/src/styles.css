@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+.background-aqua{
+    background-color: aqua;
+}
+
+.background-green{
+    background-color: chartreuse;
+}
+
+.background-pink{
+    background-color: pink;
+}

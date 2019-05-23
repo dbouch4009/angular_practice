@@ -1,0 +1,37 @@
+<div class="row">
+
+  <div class="col-xs-3">
+    <div class="cena-text cena-background"
+    [innerText]="displayMatch()"
+    >
+      
+    </div>
+  </div>
+
+  <div class="col-xs-3">
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="finishingMove"
+      >
+  </div>
+
+  <div class="col-xs-3">
+      <div class="cena-text cena-background">
+        <button class="btn btn-primary"
+          (click)="performFinishingMove()"
+          [disabled] = "finishingMove == ''"
+        >
+          {{finishingMove}}
+      </button>
+      </div>
+  </div>
+
+  <div class="col-xs-3">
+      <div class="cena-text cena-background"
+        [innerText] = "matchStatus"
+      >
+      </div>
+  </div>
+
+</div>

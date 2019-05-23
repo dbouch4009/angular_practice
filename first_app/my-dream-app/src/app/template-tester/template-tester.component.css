@@ -1,0 +1,5 @@
+/* setting styles specific to component */
+p{
+    color: red;
+    font-style: italic;
+}

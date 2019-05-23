@@ -1,0 +1,12 @@
+.app-text-color{
+    color: orangered;
+}
+
+.background-grey{
+    background-color: gray;
+}
+
+div{
+    margin: 10px 5px;
+    border: 1px black solid;
+}

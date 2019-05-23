@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="row">
+    <h1>Count Game-ula</h1>
+  </div>
+  <div class="row">
+    <app-gamecontrol></app-gamecontrol>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-6 text-center">
+        <app-boybox
+          (boyCreated)="onBoyReceived($event)"
+        ></app-boybox>
+    </div>
+
+    <div class="col-xs-6 text-center">
+        <app-girlbox
+          (girlCreated)="onGirlReceived($event)"
+        ></app-girlbox>
+    </div>
+
+  </div>
+</div>
+

@@ -1,0 +1,11 @@
+.cena-text{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 21px;
+    color: yellowgreen;
+}
+
+.cena-background{
+    background-color: black;
+    width: max-content;
+    height: max-content;
+}

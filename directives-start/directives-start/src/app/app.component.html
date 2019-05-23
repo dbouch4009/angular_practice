@@ -1,0 +1,96 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button
+        class="btn btn-primary"
+        (click)="onlyOdd = !onlyOdd">Only show odd numbers</button>
+      <br><br>
+      <ul class="list-group">
+        <div *ngIf="onlyOdd">
+          <li
+            class="list-group-item"
+            [ngClass]="{odd: number % 2 !== 0}"
+            *ngFor="let number of oddNumbers"
+            >
+            {{number}}
+          </li>
+        </div> 
+        <div *ngIf="!onlyOdd">
+            <li
+              class="list-group-item"
+              [ngClass]="{even: number % 2 === 0}"
+              [ngStyle]="{backgroundColor: number % 2 === 0 ? 'orange' : 'pink'}"
+              *ngFor="let number of evenNumbers"
+              >
+              {{number}}
+            </li>
+        </div> 
+      </ul>
+      <div appBasicHighlight>
+        <p>
+          Style me with BasicHighlight directive!
+        </p>
+      </div>
+      <div appBetterHighlight>
+          <p>
+            Style me with BetterHighlight directive!
+          </p>
+      </div>
+
+      <div appHoverHighlight>
+        <p>
+          Style me with Hover Highlight directive!
+        </p>
+      </div>
+      <div appHostBinding>
+          <p>
+            Style me with Host Binding Highlight directive!
+          </p>
+      </div>
+      <div appDirectivePropBinding 
+      [defaultColor]="'yellow'"
+      [highlightColor]="'red'"
+        >
+        <p>
+          Style me with Directive Property Highlight directive!
+        </p>
+      </div>
+      <br><br>
+      <h3>Same thing as above, but with custom structural directive.</h3>
+      <ul class="list-group">
+        <div *appUnlessDir="onlyOdd">
+          <li
+            class="list-group-item"
+            [ngClass]="{odd: number % 2 !== 0}"
+            *ngFor="let number of oddNumbers"
+            >
+            {{number}}
+          </li>
+        </div> 
+        <div *appUnlessDir="!onlyOdd">
+            <li
+              class="list-group-item"
+              [ngClass]="{even: number % 2 === 0}"
+              [ngStyle]="{backgroundColor: number % 2 === 0 ? 'orange' : 'pink'}"
+              *ngFor="let number of evenNumbers"
+              >
+              {{number}}
+            </li>
+        </div> 
+      </ul>
+      <div 
+        [ngSwitch]="value"        
+        >
+        <p *ngSwitchCase="5">Value is 5</p>
+        <p *ngSwitchCase="6">Value is 6</p>
+        <p *ngSwitchCase="7">Value is 7</p>
+        <p *ngSwitchCase="8">Value is 8</p>
+        <p *ngSwitchDefault>Value is Default</p>
+      </div>
+      <div>
+        <app-name-switch></app-name-switch>
+
+      </div>
+    </div>
+  </div>
+</div>
