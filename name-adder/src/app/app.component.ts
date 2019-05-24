@@ -1,9 +1,13 @@
 import { Component, Input } from '@angular/core';
+import {Games} from './entities/games';
+import {GamesListService} from './services/gamesList.service';
+import { LoggingService } from './services/logging.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers:[GamesListService, LoggingService]
 })
 export class AppComponent {
   persons = [
@@ -13,7 +17,6 @@ export class AppComponent {
   recentPerson: {firstName: string, lastName: string};
   
   recentLast = '';
-
 
   onPersonCreated(personData: {firstName: string, lastName: string}){
     //console.log(`Received Person Data: ${personData.firstName} ${personData.lastName}`);
@@ -25,5 +28,20 @@ export class AppComponent {
       lastName: personData.lastName
     });
   }
-  
+
+
+  // Games Ratings from here:
+
+  gamesList: Games[] = [];
+
+  constructor(private gamesListService: GamesListService, private loggingService: LoggingService) {
+
+   }
+
+   ngOnInit(){
+     this.gamesList = this.gamesListService.gamesList;  //assigning by reference
+   }
+
+   
+   
 }

@@ -33,5 +33,23 @@
       ></app-show-names>
     </div>
   </div>
+</div>
 
+<br><hr><br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+        <app-game-rate></app-game-rate>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-game-listing
+        *ngFor="let game of gamesList"  
+        [name] = "game.name"
+        [rating] = "game.rating"
+      ></app-game-listing>
+    </div>
+  </div>
 </div>

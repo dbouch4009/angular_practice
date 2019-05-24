@@ -10,10 +10,11 @@ import { AccountsService } from '../services/accounts.services';
     ////also not necessary if it is imported in app.module.ts, because it will inherit the same instance
 })
 export class NewAccountComponent {
-  constructor(private loggingService: LoggingService, private accountsService: AccountsService){   //service injection best practice
-    this.accountsService.statusUpdated.subscribe(
-      (status: string) => alert('New Status: ' + status)
-      );
+  constructor(private loggingService: LoggingService, 
+    private accountsService: AccountsService){   //service injection best practice
+      this.accountsService.statusUpdated.subscribe(
+        (status: string) => alert('New Status: ' + status)
+        );
   };
 
   onCreateAccount(accountName: string, accountStatus: string){

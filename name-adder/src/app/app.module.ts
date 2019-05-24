@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { AddNameComponent } from './add-name/add-name.component';
 import { ShowNamesComponent } from './show-names/show-names.component';
 import { RecentNameComponent } from './recent-name/recent-name.component';
+import { GameRateComponent } from './game-rate/game-rate.component';
+import { GameListingComponent } from './game-listing/game-listing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddNameComponent,
     ShowNamesComponent,
-    RecentNameComponent
+    RecentNameComponent,
+    GameRateComponent,
+    GameListingComponent
   ],
   imports: [
     BrowserModule,
