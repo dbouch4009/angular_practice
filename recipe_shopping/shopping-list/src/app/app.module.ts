@@ -12,6 +12,7 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { DropdownDirective } from './Shared/dropdown.directive';
+import { ShoppingListService } from './services/shopping-list.service';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { DropdownDirective } from './Shared/dropdown.directive';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ShoppingListService],  //now able to use this application-wide
   bootstrap: [AppComponent]
 })
 export class AppModule { }
