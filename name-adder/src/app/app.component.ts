@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import {Games} from './entities/games';
 import {GamesListService} from './services/gamesList.service';
 import { LoggingService } from './services/logging.service';
+import { NamesListService } from './services/namesList.service';
 
 @Component({
   selector: 'app-root',
@@ -34,7 +35,9 @@ export class AppComponent {
 
   gamesList: Games[] = [];
 
-  constructor(private gamesListService: GamesListService, private loggingService: LoggingService) {
+  constructor(private gamesListService: GamesListService, 
+    private loggingService: LoggingService,
+    private namesListService: NamesListService) {
 
    }
 

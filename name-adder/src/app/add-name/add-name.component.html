@@ -39,4 +39,12 @@
       (click)="onAddName()"
     >Add Name</button>
   </div>
+
+  <div class="row">
+      <div class="col-xs-12">
+        <app-show-names
+          *ngFor = "let name of namesList"
+          [personEntity] = "name"
+        ></app-show-names>
+
 </div>

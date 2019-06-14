@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { GamesListService } from '../services/gamesList.service';
 import { Games } from '../entities/games';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-game-listing',
@@ -13,9 +14,15 @@ export class GameListingComponent implements OnInit {
   @Input() name = 'defname';
   @Input() rating: string = 'defrating';
 
-  constructor(private gamesListService: GamesListService) { }
+  constructor(private gamesListService: GamesListService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+  }
+
+  onEditGame(){
+    this.router.navigate(['edit'],{relativeTo: this.activatedRoute});
   }
 
 }
