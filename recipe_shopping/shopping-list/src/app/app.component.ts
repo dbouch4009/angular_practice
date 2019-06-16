@@ -9,9 +9,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   loadedFeature: string = 'recipe';
-
-  onNavigate(feautre: string){
-    this.loadedFeature = feautre;
-  }
   
 }

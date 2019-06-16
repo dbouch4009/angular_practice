@@ -2,6 +2,7 @@ import {Recipe} from '../Shared/recipe.model';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Ingredient } from '../Shared/ingredient.model';
 import { ShoppingListService } from './shopping-list.service';
+import { Subject } from 'rxjs';
 
 @Injectable()
 export class RecipeService{
@@ -21,7 +22,7 @@ export class RecipeService{
         
       }
 
-      recipeSelected = new EventEmitter<Recipe>();
+      recipeSelected = new Subject<Recipe>();
 
       getRecipes(){
           return this.recipes.slice();  //slice() will return new array instead of accessing the memory reference

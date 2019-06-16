@@ -16,11 +16,7 @@ export class RecipesComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.recipeService.recipeSelected.subscribe(
-      (recipe: Recipe) => {   //argument list header of anon function
-        this.selectedRecipe = recipe;  //function body
-      }
-    )
+    
   }
 
 }
