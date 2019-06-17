@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -14,6 +14,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { HomeComponent } from './home/home.component';
 import { LandingComponent } from './landing/landing.component';
 import { NamesListService } from './services/namesList.service';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 const appRoutes: Routes = [
   {  //Home Component
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
     children: [
       {path: 'names', component: AddNameComponent},
       {path: 'games', component: GameRateComponent},
-      {path: '', component: LandingComponent}
+      {path: '', component: LandingComponent},
+      {path: 'users',component: CreateUserComponent}
     ]
   },  
   {path: 'not-found',component: ErrorPageComponent},
@@ -39,13 +41,15 @@ const appRoutes: Routes = [
     GameListingComponent,
     ErrorPageComponent,
     HomeComponent,
-    LandingComponent
+    LandingComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes, {useHash: true})
+    RouterModule.forRoot(appRoutes, {useHash: true}),
+    ReactiveFormsModule
   ],
   providers: [NamesListService],
   bootstrap: [AppComponent]
